@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Example Site</title>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <style type="text/css">
+            .operand {
+                width: 200px;
+                text-align: right;
+                font-family: tahoma;
+            }
+            .operand input {
+                width: 180px;
+                border: none;
+                text-align: right;
+                font-size: 20pt;
+                font-family: tahoma;
+            }
+            .operator {
+                width: 210px;
+                text-align: right;
+                font-size: 20pt;
+                font-family: tahoma;
+            }
+            .result {
+                width: 200px;
+                border-top: 1px solid #000;
+                border-bottom: 1px solid #000;
+                font-size: 20pt;
+                text-align: right;
+                font-family: tahoma;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="operand">
+            <input id="number1" type="text" />
+        </div>
+        <div class="operator">
+            +
+        </div>
+        <div class="operand">
+             <input id="number2" type="text" />
+        </div>
+        <div id="result" class="result" />&nbsp;</div>
+        <script type="text/javascript">
+            $(function() {
+                function recalc() {
+                    $('#result').html(parseFloat($('#number1').val()) + parseFloat($('#number2').val()));
+                }
+
+                $('#number1,#number2').on('keyup', recalc).on('change', recalc);
+            });
+        </script>
+    </body>
+</html>
