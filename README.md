@@ -16,6 +16,12 @@ requests
 selenium
 ```
 
+## Execute test cases
+
+```
+pybot ./example
+```
+
 ## Note
 
 Some test cases require a testing web site in ```./web``` directory. Go there and start web server on port ```8888```.
