@@ -1,5 +1,5 @@
 *** Settings ***
-Suite Setup  Open Browser  http://localhost:8888/simple_form  Chrome
+Suite Setup  Open Browser  http://localhost:8888/simple_form
 Suite Teardown  Close All Browsers
 Library  Selenium2Library
 
