@@ -6,5 +6,6 @@ Google Search Should Be Success
     [Setup]  Open Browser  https://www.google.co.th/
     Input Text  lst-ib  chonla
     Press Key  lst-ib  \\13
-    Wait Until Keyword Succeeds  15s  1s  Page Should Contain  chonla
+    Wait Until Keyword Succeeds  15s  1s  Page Should Contain Element  search
+    Element Should Contain  search  chonla
     [Teardown]  Close Browser

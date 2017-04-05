@@ -6,4 +6,5 @@ Search Google With Keyword
 
 Result Should Contain Keyword
     [Arguments]  ${keyword}
-    Wait Until Keyword Succeeds  15s  1s  Page Should Contain  ${keyword}
+    Wait Until Keyword Succeeds  15s  1s  Page Should Contain Element  search
+    Element Should Contain  search  ${keyword}
